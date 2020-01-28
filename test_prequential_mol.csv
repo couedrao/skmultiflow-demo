@@ -1,0 +1,6 @@
+# TEST CONFIGURATION BEGIN
+# MultilabelGenerator(n_features=50, n_labels=2, n_samples=50001, n_targets=5, random_state=0)
+# [RCA] MultiOutputLearner(base_estimator=LSTMMask(batch_size=1, embedding_size=128, epochs=10, filters=64, kernel_size=5, lstm_output_size=5, max_features=50, maxlen=50, pool_size=4))
+# EvaluatePrequential(batch_size=1, data_points_for_classification=False, max_samples=49000, max_time=1000, metrics=['hamming_score', 'hamming_loss', 'j_index', 'exact_match'], n_wait=200, output_file='test_prequential_mol.csv', pretrain_size=1000, restart_stream=True, show_plot=True)
+# TEST CONFIGURATION END
+id,mean_hamming_score_[RCA],current_hamming_score_[RCA],mean_hamming_loss_[RCA],current_hamming_loss_[RCA],mean_j_index_[RCA],current_j_index_[RCA],mean_exact_match_[RCA],current_exact_match_[RCA]
