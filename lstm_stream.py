@@ -5,11 +5,11 @@ import warnings
 from timeit import default_timer as timer
 
 import numpy as np
-from keras.layers import Conv1D, MaxPooling1D
-from keras.layers import Dense, Dropout, Activation
-from keras.layers import Embedding
-from keras.layers import LSTM
-from keras.models import Sequential
+from tensorflow.keras.layers import Conv1D, MaxPooling1D
+from tensorflow.keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.models import Sequential
 from numpy import unique
 from skmultiflow.core import BaseSKMObject, ClassifierMixin
 from skmultiflow.evaluation.base_evaluator import StreamEvaluator
@@ -78,7 +78,7 @@ class LSTMMask(BaseSKMObject, ClassifierMixin):
             self
         """
         # self.classifier.partial_fit(X=X, y=y, classes=classes, sample_weight=sample_weight)
-        self.classifier.fit(X, y, epochs=2000, batch_size=1, validation_split=0.05, verbose=0)
+        self.classifier.fit(X, y, epochs=self.epochs, batch_size=self.batch_size, validation_split=0.05, verbose=0)
         return self
 
     def predict(self, X):
